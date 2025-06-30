@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask
 from .config import DevelopmentConfig
 from .extensions import db, migrate
