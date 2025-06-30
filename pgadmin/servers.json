@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "ssc_db": {
+      "Name": "ssc_db",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "postgres",
+      "Username": "testuser",
+      "SSLMode": "prefer"
+    }
+  }
+}
