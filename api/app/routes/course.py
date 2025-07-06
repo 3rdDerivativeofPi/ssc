@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from ..models.course import Course
 from ..extensions import db
+from ..routes.auth import token_required
 
 course_bp = Blueprint('course', __name__, url_prefix='/courses')
 
@@ -15,6 +16,7 @@ def get_course(course_id):
     return jsonify(course.to_dict())
 
 @course_bp.route('/', methods=['POST'])
+@token_required
 def create_course():
     data = request.get_json()
     name = data.get('name')
@@ -27,6 +29,7 @@ def create_course():
     return jsonify(course.to_dict()), 201
 
 @course_bp.route('/<int:course_id>', methods=['PUT'])
+@token_required
 def update_course(course_id):
     course = Course.query.get_or_404(course_id)
     data = request.get_json()
@@ -36,6 +39,7 @@ def update_course(course_id):
     return jsonify(course.to_dict())
 
 @course_bp.route('/<int:course_id>', methods=['DELETE'])
+@token_required
 def delete_course(course_id):
     course = Course.query.get_or_404(course_id)
     db.session.delete(course)
