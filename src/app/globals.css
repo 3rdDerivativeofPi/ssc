@@ -1,21 +1,24 @@
 @import "tailwindcss";
 
+/* YIPI Theme Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --yipi-orange: #ff8201;
+  --yipi-orange-light: #f5a440;
+  --yipi-cream: #f9f8f2;
+  --yipi-green: #74c645;
+  --yipi-black: #010101;
+  --yipi-orange-dark: #d7720e;
+  --yipi-olive: #29281c;
+  --yipi-navy: #030107;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: var(--yipi-cream);
+  --foreground: var(--yipi-black);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--yipi-cream);
+    --foreground: var(--yipi-black);
   }
 }
 
