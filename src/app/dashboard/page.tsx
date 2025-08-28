@@ -18,7 +18,7 @@ export default function DashboardPage() {
   return (
     <div className="p-8 space-y-8">
       <section>
-        <h2 className="text-2xl font-bold mb-4">Due Today's Homework</h2>
+        <h2 className="text-2xl font-bold mb-4">Due Today&apos;s Homework</h2>
         <ul className="space-y-2">
           {todaysHomework.length === 0 ? (
             <li style={{ color: "#d7720e" }}>No homework due today.</li>
@@ -42,7 +42,9 @@ export default function DashboardPage() {
         </ul>
       </section>
       <section>
-        <h2 className="text-2xl font-bold mb-4">Due Tomorrow's Homework</h2>
+        <h2 className="text-2xl font-bold mb-4">
+          Due Tomorrow&apos;s Homework
+        </h2>
         <ul className="space-y-2">
           {tomorrowsHomework.length === 0 ? (
             <li style={{ color: "#d7720e" }}>No homework due tomorrow.</li>
